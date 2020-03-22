@@ -1,0 +1,115 @@
+    .ContactForm {
+        background: gray;
+        background-size: cover;
+        color: #fff;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: row
+    
+    }
+    
+    .ContactForm::before {
+        content: '';
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 0;
+    
+    }
+    
+    .ContactForm .wrapper {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: row
+    
+    }
+    
+    .ContactForm .contact-form {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 2em;
+        border-radius: 0.5em;
+        box-shadow:  0 0 10px rgba(0, 0, 0, 0.13);
+        text-align: center;
+        
+    }
+    
+    .ContactForm .contactInputFields{ 
+        background: transparent;
+        align-items: center;
+        border: 0;
+        color: #c5ecfd;
+        width: 100%
+    }
+
+    
+    
+    .ContactForm .contactInputFields .Input,
+    .contact-msg textarea {
+        background: transparent;
+        border: 0;
+        border-bottom: 2px solid #c5ecfd;
+        padding: 1em;
+        color: #c5ecfd;
+        width: 100%;
+        max-width: 900px;
+    }
+    
+    .contact-msg textarea {
+        padding: 1em;
+        width: 100%;
+        max-width: 900px;
+        height: 212px;
+    }
+    
+    ::-webkit-input-placeholder {
+        color: #c5ecfd;
+    }
+    
+    ::-moz-input-placeholder {
+        color: #c5ecfd;
+    }
+    
+    ::-ms-input-placeholder {
+        color: #c5ecfd;
+    }
+    
+    button {
+        width: 100%;
+        background: aqua;
+        text-align: center;
+        color: #000;
+        padding: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+    
+    @media (min-width: 150px) and (max-width: 736px){
+
+        .ContactForm .wrapper {
+            width: 100%;
+            align-items: center;
+        }
+
+
+        .ContactForm .contact-form {
+            width: 100%;
+            align-items: center;
+        }
+
+        .ContactForm .contactInputFields .Input,
+        .contact-msg textarea {
+            align-items: center;
+        }
+    }
