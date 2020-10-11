@@ -1,39 +1,22 @@
 import React from "react";
 import Burger from "./Burger";
+import logo from '../../logo.svg'
 
 import styled from "styled-components";
 
-const Nav = styled.nav`
-  width: 100%;
-  height: 55px;
-  border-bottom: 2px solid #f1f1f1;
-  padding: 0 5px;
-  display: flex;
-  justify-content: space-between;
 
-  .logo {
-    padding: 10px 0;
-    width: 18rem;
-  }
-
-  @media (max-width: 768px) {
-    .logo {
-      width: 15rem;
-      margin-top: 0.3em;
-      margin-right: 0.1rem;
-    }
-  }
-`;
 
 const Navbar = () => {
   return (
-    <header>
-      <Nav>
-        <div className="logo">
-          <img src={Striscia} alt="via roma non solo pizza logo" />
-        </div>
-        <Burger />
-      </Nav>
+    <header className="w-full border-b border-gray-300">
+      <div className="container mx-auto py-2 px-2">
+        <nav className="w-full flex flex-row sm:flex-col justify-between md:justify-center sm:items-center">
+          <div className="w-48 p-0 m-0 ">
+            <img src={logo} alt="via roma non solo pizza logo" />
+          </div>
+          <Burger />
+        </nav>
+      </div>
     </header>
   );
 };

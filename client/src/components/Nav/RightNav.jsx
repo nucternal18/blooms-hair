@@ -4,32 +4,35 @@ import styled from "styled-components";
 
 
 //context
-import { AuthContext } from "../../context/authContext";
+// import { AuthContext } from "../../context/authContext";
 
 const RightNav = ({ open, setOpen }) => {
-  const authContext = useContext(AuthContext);
+  // const authContext = useContext(AuthContext);
 
-  const { isAuthenticated, logout } = authContext;
+  // const { isAuthenticated, logout } = authContext;
   return (
-    <Ul open={open} onClick={() => setOpen(!open)}>
-      <Link to="/">
-        <li>HOME</li>
-      </Link>
-
-      <Link to="/menu">
-        <li>MENU</li>
-      </Link>
-
-      <Link to="/galleria">
-        <li>GALLERIA</li>
-      </Link>
-
-      <Link to="/contatti">
-        <li>CONTATTI</li>
-      </Link>
-      { isAuthenticated && (
+    <Ul open={ open } onClick={ () => setOpen(!open) }>
+      <li>
+        <Link to='/'>HOME</Link>
+      </li>
+      <li>
+        <Link to='/about-us'>ABOUT US</Link>
+      </li>
+      <li>
+        <Link to='/service-menu'>SERVICE MENU</Link>
+      </li>
+      <li>
+        <Link to='/special-offers'>SPECIAL OFFERS</Link>
+      </li>
+      <li>
+        <Link to='/contact-us'>CONTACT US</Link>
+      </li>
+      <li>
+        <Link to='/book-online'>BOOK ONLINE 24/7</Link>
+      </li>
+      {/* { isAuthenticated && (
         <li onClick={() => logout()}>ESCI</li>
-      )}
+      )} */}
     </Ul>
   );
 };
@@ -46,7 +49,7 @@ const Ul = styled.ul`
     color: #333;
 
     &:hover {
-      color: #ff0094;
+      color: #60baf7;
     }
   }
 
@@ -54,9 +57,9 @@ const Ul = styled.ul`
     color: #333;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 650px) {
     flex-flow: column nowrap;
-    background-color: #ba4a4a;
+    background-color: #000;
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;

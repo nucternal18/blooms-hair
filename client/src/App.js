@@ -2,8 +2,7 @@
 import React, {Suspense} from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-
-import Header from './components/header.component';
+import Navbar from './components/Nav/Navbar.jsx'
 import Footer from './components/footer.components';
 import Spinner from './components/spinner.component';
 import ErrorBoundary from './components/error-boundary.component';
@@ -19,7 +18,7 @@ import './App.css';
 const App = () => {
   return (
     <div >
-      <Header />
+      <Navbar />
       <Switch >
         <ErrorBoundary>
           <Suspense fallback={<Spinner />}>
