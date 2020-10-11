@@ -14,21 +14,21 @@ body {
   min-height: 100vh;
 }
 
-/* .home-container { */
-  /* width: calc(50% - 1rem); */
-  /* Allow each article to shrink and grow to fit the row
-     with initial size based on its width or content */
-  /* flex-shrink: 1;
-  flex-grow: 1;
-  margin: 0.5rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
-} */
+.homecard-sm {
+  height: 500px;
+}
+
+.homepage-card {
+  width: 100%;
+  background-image: url(./Assets/images/AdobeStock_53052353.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 600px;
+}
  
 
-img {
-  width: 100%;
-}
 
 
 .content {
@@ -37,15 +37,15 @@ img {
 
 
 
-@media screen and (max-width: 17rem) {
-  .home-container {
-    width: calc(100% - 1rem);
-  }
-}
-
 /* book online */
 .vagaro a {
   font-size:14px; 
   color:#AAA; 
   text-decoration:none;
+}
+
+@media only screen and (max-width: 600px) {
+  .homepage-card {
+    height: 550px;
+  }
 }
