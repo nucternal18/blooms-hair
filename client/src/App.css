@@ -9,27 +9,21 @@ body {
   height: 100%;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  /* flex-direction: column; */
-  min-height: 100vh;
-}
 
 .booking-container {
   min-height: 100vh;
 }
 
-.home-container {
+/* .home-container { */
   /* width: calc(50% - 1rem); */
   /* Allow each article to shrink and grow to fit the row
      with initial size based on its width or content */
-  flex-shrink: 1;
+  /* flex-shrink: 1;
   flex-grow: 1;
   margin: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
-}
+} */
  
 
 img {
@@ -41,16 +35,7 @@ img {
   flex: 1 0 auto;
 }
 
-.app-footer {
-  background-color: #333333;
-  color: #fff;
-  padding: 2em;
-  font-size: 14px;
-  margin-top: 10px;
-  flex-shrink: 0;
-  bottom: 0;
-  text-align: center;
-}
+
 
 @media screen and (max-width: 17rem) {
   .home-container {
