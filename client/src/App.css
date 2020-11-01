@@ -18,45 +18,57 @@ code {
     monospace;
 }
 
-
 .homecard-sm {
   height: 500px;
 }
 
 .homepage-card {
-  transform: translate(-0%, -20%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56%);
+  object-fit: cover;
   width: 100%;
-  background-image: url(./Assets/images/AdobeStock_53052353.jpeg)  ;
+  background: url(./Assets/images/AdobeStock_53052353.jpeg) no-repeat center
+    center;
   background-size: cover;
-  background-position: center;
-  position: relative;
-  min-height: 700px;
+  position: absolute;
+  min-height: 90vh;
   scroll-behavior: smooth;
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .abt-img-card {
-  background-image: url(./Assets/images/AdobeStock_208497707.jpeg)  ;
+  background-image: url(./Assets/images/AdobeStock_208497707.jpeg);
   background-size: cover;
-  background-position: center;
   position: relative;
   min-height: 400px;
   scroll-behavior: smooth;
-    overflow: hidden;
-    margin: 0;
+  overflow: hidden;
+  margin: 0;
 }
-
-
+.srv-menu-card {
+  background-image: url(./Assets/images/AdobeStock_290145313.jpeg);
+  background-size: cover;
+  position: relative;
+  min-height: 500px;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  margin: 0;
+}
 
 /* book online */
 .vagaro a {
-  font-size:14px; 
-  color:#AAA; 
-  text-decoration:none;
+  font-size: 14px;
+  color: #aaa;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 600px) {
   .homepage-card {
     height: 550px;
+  }
+
+  .abt-img-card {
+    background-position: center;
   }
 }

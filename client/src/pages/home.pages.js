@@ -17,7 +17,7 @@ const variants = {
 const Home = () => {
     return (
       <section
-        className='w-full'
+        className='w-full flex flex-col'
       >
         <div className='homepage-card justify-center flex items-center text-3xl sm:text-6xl text-white font-bold text-center mb-0'>
           <motion.div
@@ -30,7 +30,9 @@ const Home = () => {
             <p>Welcome to Blooms Hair</p>
           </motion.div>
         </div>
-        <HomepageContainer />
+        <div className="m-0">
+          <HomepageContainer />
+        </div>
       </section>
     );
 

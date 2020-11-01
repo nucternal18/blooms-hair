@@ -164,7 +164,7 @@ const HomepageContainer = () => {
           </div>
         </div>
       </div>
-      <div className='homecard-sm bg-transparent text-white justify-center flex flex-col items-center text-white font-bold text-center'>
+      <div className='homecard-sm bg-transparent text-white justify-center flex items-center text-white font-bold text-center'>
         <motion.div
             className='opacity-75 z-50'
             initial='hidden'
@@ -172,9 +172,9 @@ const HomepageContainer = () => {
             variants={variants}
             transition={{ duration: 2.0 }}
           >
-          <h2 className="text-4xl">Let's Get Social'</h2>
+          <h2 className="text-4xl">Let's Get Social</h2>
           <p>Keep up to date with Blooms Hair on our social media channels</p>
-            <ul className='mx-auto '>
+            <ul className='flex justify-center '>
               <li className='px-1 py-2 m-1 hover:text-blue-500'>
                 <a href='https://www.facebook.com/pages/category/Pizza-Place/Viaromanonsolopizza-108686514250214/'>
                   <i className='fab fa-facebook text-4xl' />
