@@ -20,6 +20,10 @@ code {
 
 .homecard-sm {
   height: 500px;
+  z-index: 100;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5)
 }
 
 .homepage-card {
@@ -55,12 +59,30 @@ code {
   overflow: hidden;
   margin: 0;
 }
+.contact-menu-card {
+  background-image: url(./Assets/images/clark-tibbs-oqStl2L5oxI-unsplash.jpg);
+  background-size: cover;
+  position: relative;
+  min-height: 600px;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  margin: 0;
+}
 
 /* book online */
 .vagaro a {
   font-size: 14px;
   color: #aaa;
   text-decoration: none;
+}
+
+.BackDrop {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5)
 }
 
 @media only screen and (max-width: 600px) {

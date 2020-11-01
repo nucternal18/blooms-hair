@@ -7,7 +7,7 @@ import Lauren from '../Assets/images/lauren-fleischmann-akfxOADwNhk-unsplash.jpg
 // import homeImage from '../Assets/images/AdobeStock_53052353.jpeg';
 
 // Containers
-import HomepageContainer from '../Container/HomeContainer/HomeCard.container';
+import HomepageContainer from '../Container/HomeCard.container';
 
 const variants = {
   hidden: { opacity: 0 },

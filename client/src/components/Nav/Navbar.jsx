@@ -6,15 +6,15 @@ import logo from '../../logo.svg'
 
 const Navbar = () => {
   return (
-    <header className="w-full border-b bg-gray-900">
-      <div className="container mx-auto py-2 px-2 flex justify-center items-center">
-        <nav className="w-full flex flex-row justify-between ">
+    <header className="w-full bg-gray-900">
+      <nav className="container mx-auto py-2 px-2 flex justify-center items-center">
+        <div className="w-full flex flex-row justify-between ">
           <div className="w-48 sm:w-56 p-0 m-0 z-50">
             <img src={logo} alt="via roma non solo pizza logo"  />
           </div>
           <Burger />
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
   );
 };

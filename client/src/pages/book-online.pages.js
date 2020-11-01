@@ -45,10 +45,10 @@ const BookOnline = () => {
     }, [loaded]);
 
     return (
-      <div className="flex-grow">
+      <div className="BackDrop flex-grow">
         <div id="frameTitle" className="embedded-widget-title" style={frameOne}>
         </div>
-        <div ref={scriptEl} className="vagaro" style={vagaroOne}>
+        <div ref={scriptEl} className="vagaro text-white" style={vagaroOne}>
           <a href='https://sales.vagaro.com/'>Powered by Vagaro</a>&nbsp;
           <a href='https://sales.vagaro.com/salon-software'>Salon Software</a>
           ,&nbsp;

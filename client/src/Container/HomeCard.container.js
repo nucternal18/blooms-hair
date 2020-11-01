@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 //Images
-import AdobeStock_123825321 from "../../Assets/images/AdobeStock_123825321.jpeg";
+import AdobeStock_123825321 from "../Assets/images/AdobeStock_123825321.jpeg";
 
 const variants = {
   hidden: { opacity: 0 },
