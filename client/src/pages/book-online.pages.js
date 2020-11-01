@@ -45,7 +45,7 @@ const BookOnline = () => {
     }, [loaded]);
 
     return (
-      <div className="booking-container">
+      <div className="flex-grow">
         <div id="frameTitle" className="embedded-widget-title" style={frameOne}>
         </div>
         <div ref={scriptEl} className="vagaro" style={vagaroOne}>

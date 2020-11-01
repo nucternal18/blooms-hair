@@ -146,16 +146,21 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   z-index: 40;
 
   li {
     padding: 18px 10px;
-
+    text-align: justify;
+    color: #fff;
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 1023px) {
     flex-flow: column nowrap;
+    justify-content: start;
+  align-items: flex-start;
     background-color: #000;
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
@@ -166,9 +171,6 @@ const Ul = styled.ul`
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     opacity: 0.9;
-    li {
-      color: #fff;
-    }
   }
 `;
 

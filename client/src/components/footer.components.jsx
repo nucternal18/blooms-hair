@@ -4,7 +4,7 @@ import WrappedMap from './GoogleMaps';
 const Footer = () => (
   <>
     <footer className=' w-full bg-gray-900 py-4 text-white bottom-0 left-0 mb-0'>
-      <div className='container mx-auto my-6 px-4 grid grid-cols-1 md:grid-cols-4  gap-2 my-0'>
+      <div className='container mx-auto py-2 sm:py-6 px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-4  gap-2 my-0'>
         <div className='w-full  mb-4 sm:mb-0'>
           <h2 className='text-xl font-bold mb-4'>ABOUT BLOOMS HAIR</h2>
           <p className='mb-4 text-gray-500 text-sm font-hairline'>

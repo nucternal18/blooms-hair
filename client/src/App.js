@@ -17,7 +17,7 @@ import './App.css';
 
 const App = () => {
   return (
-    <div >
+    <main className="min-h-screen flex flex-col">
       <Navbar />
       <Switch >
         <ErrorBoundary>
@@ -32,7 +32,7 @@ const App = () => {
         </ErrorBoundary>
       </Switch>
       <Footer />
-    </div>
+    </main>
   );
 }
 

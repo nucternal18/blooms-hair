@@ -1,38 +1,49 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-html,
 body {
-  height: 100%;
+  background-image: url('./Assets/images/lauren-fleischmann-akfxOADwNhk-unsplash.jpg');
+  background-attachment: fixed;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-
-.booking-container {
-  min-height: 100vh;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
+
 
 .homecard-sm {
   height: 500px;
 }
 
 .homepage-card {
+  transform: translate(-0%, -20%);
   width: 100%;
-  background-image: url(./Assets/images/AdobeStock_53052353.jpeg);
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url(./Assets/images/AdobeStock_53052353.jpeg)  ;
   background-size: cover;
+  background-position: center;
   position: relative;
-  height: 600px;
+  min-height: 700px;
+  scroll-behavior: smooth;
+    overflow: hidden;
 }
- 
 
-
-
-.content {
-  flex: 1 0 auto;
+.abt-img-card {
+  background-image: url(./Assets/images/AdobeStock_208497707.jpeg)  ;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 400px;
+  scroll-behavior: smooth;
+    overflow: hidden;
+    margin: 0;
 }
 
 
