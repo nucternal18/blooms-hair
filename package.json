@@ -26,10 +26,7 @@
     "nodemailer": "^6.4.5"
   },
   "devDependencies": {
-    "autoprefixer": "^10.0.1",
     "concurrently": "^5.1.0",
-    "nodemon": "^2.0.2",
-    "postcss-cli": "^8.1.0",
-    "tailwindcss": "^1.8.13"
+    "nodemon": "^2.0.2"
   }
 }

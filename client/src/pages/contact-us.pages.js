@@ -1,6 +1,10 @@
 import React from 'react';
-import InputForm from '../components/inputForm.component';
-import WrappedMap from '../components/GoogleMaps';
+import Maps from '../components/GoogleMaps';
+
+
+const containerStyle = {
+  height: '400px',
+};
 
 const ContactUs = () => {
   return (
@@ -57,12 +61,7 @@ const ContactUs = () => {
         </div>
       </div>
       <div className='w-full'>
-        <WrappedMap
-          googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&v=3.exp&libraries=geometry,drawing,places`}
-          loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: `400px` }} />}
-          mapElement={<div style={{ height: `100%` }} />}
-        />
+        <Maps containerStyle={containerStyle} />
       </div>
     </div>
   );

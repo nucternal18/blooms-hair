@@ -1,5 +1,9 @@
 import React from 'react';
-import WrappedMap from './GoogleMaps';
+import Maps from './GoogleMaps';
+
+const containerStyle = {
+  height: '200px',
+};
 
 const Footer = () => (
   <>
@@ -67,12 +71,7 @@ const Footer = () => (
             A: 9 Lever Street, London EC1V 3QU
           </p>
           <div className='w-full'>
-            <WrappedMap
-              googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&v=3.exp&libraries=geometry,drawing,places`}
-              loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ height: `200px` }} />}
-              mapElement={<div style={{ height: `100%` }} />}
-            />
+            <Maps containerStyle={containerStyle} />
           </div>
         </div>
         <div className='w-full mb-4 sm:mb-0'>

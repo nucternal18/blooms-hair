@@ -2,49 +2,53 @@ import React, { useState } from "react";
 
 import {
   GoogleMap,
-  withScriptjs,
-  withGoogleMap,
+  LoadScript,
   Marker,
   InfoWindow,
-} from "react-google-maps";
+} from "@react-google-maps/api";
 
-const Maps = () => {
+
+
+const center = {
+  lat: 51.526528,
+  lng: -0.099461,
+};
+
+const Maps = ({containerStyle}) => {
   const [selected, setSelected] = useState(false);
 
   return (
-    <>
+    <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
       <GoogleMap
-        defaultZoom={18}
-        defaultCenter={{ lat: 45.72398, lng: 8.63095 }}
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={18}
       >
         <Marker
-          position={{ lat: 45.72398, lng: 8.63095 }}
+          position={{ lat: 51.526528, lng: -0.099461 }}
           onClick={() => {
             setSelected(true);
           }}
         />
         {selected && (
           <InfoWindow
-            position={{ lat: 45.72398, lng: 8.63095 }}
+            position={{ lat: 51.526528, lng: -0.099461 }}
             onCloseClick={() => {
               setSelected(false);
-            }}
-          >
+            }}>
             <div>
               <h1 className='p-2 text-xl bg-red-700 text-white font-bold mb-2'>
-                via ROMA | non solo pizza
+                Blooms Hair
               </h1>
-              <p className='mb-4 font-thin'>
-                Via Roma, 40, 21018 Sesto Calende VA, Italy
-              </p>
+              <p className='mb-4 font-thin'>9 Lever Street, London. EC1V 3QU</p>
             </div>
           </InfoWindow>
         )}
       </GoogleMap>
-    </>
+    </LoadScript>
   );
 };
 
-const WrappedMap = withScriptjs(withGoogleMap(Maps));
 
-export default WrappedMap;
+
+export default React.memo(Maps);
