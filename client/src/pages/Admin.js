@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from 'react';
+import { withRouter } from 'react-router-dom';
 import UploadForm from '../components/UploadForm';
-import Cookies from 'js-cookie';
 
 // context
 import { AuthContext } from '../context/context';
@@ -8,24 +8,13 @@ import { AuthContext } from '../context/context';
 // firebase
 import { auth, createUserProfileDocument } from '../firebase/config';
 
-const Admin = (props) => {
+const Admin = withRouter(({history}) => {
   const authContext = useContext(AuthContext);
 
-  const { setIsAuthenticated, setUserData, user, logout } = authContext;
+  const { setUserData, user, logout } = authContext;
 
   console.log(user);
-  const authCookie = (e) => {
-    const authToken = Cookies.get('auth-token');
-    if (authToken) {
-      setIsAuthenticated(true);
-    }
-  };
-
-  useEffect(() => {
-    authCookie();
-    // eslint-disable-next-line
-  }, []);
-
+  
   useEffect(() => {
     const unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
@@ -53,7 +42,7 @@ const Admin = (props) => {
         <div>
           {user && (
             <button
-              onClick={() => logout()}
+              onClick={() => logout(() => history.push('/'))}
               className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
               <i className='fas fa-sign-out-alt'></i>
               LOGOUT
@@ -66,6 +55,6 @@ const Admin = (props) => {
       </div>
     </div>
   );
-};
+});
 
 export default Admin;

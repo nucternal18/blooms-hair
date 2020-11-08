@@ -2,6 +2,7 @@
 import React, { Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
+
 // Components
 import Navbar from './components/Nav/Navbar.jsx';
 import Footer from './components/footer.components';
@@ -29,6 +30,8 @@ import AuthRoute from './utils/AuthRoute';
 import './App.css';
 
 const App = () => {
+
+
   return (
     <AuthProvider>
       <main className='min-h-screen flex flex-col'>
@@ -43,7 +46,7 @@ const App = () => {
               <Route exact path='/contact-us' component={ContactUs} />
               <Route exact path='/book-online' component={BookOnline} />
               <Route exact path='/gallery' component={Gallery} />
-              <AuthRoute exact path='/admin' component={Admin} />
+              <AuthRoute path='/admin' component={Admin} />
               <Route exact path='/login' component={Login} />
             </Suspense>
           </ErrorBoundary>

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import ImageGrid from '../components/ImageGrid';
 import Modal from '../components/Modal';
 

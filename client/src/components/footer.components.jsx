@@ -9,8 +9,7 @@ const containerStyle = {
 };
 
 const Footer = () => {
-  const { user } = useContext(AuthContext);
-  console.log(user)
+  const { isAuthenticated } = useContext(AuthContext);
 
   return (
     <>
@@ -113,7 +112,7 @@ const Footer = () => {
               <h2 className='text-base sm:text-xl mb-4'>Links</h2>
 
               <ul className='text-gray-500 font-thin flex flex-row'>
-                {user ? (
+                {isAuthenticated ? (
                   <li className='mb-3'>
                     <Link to='/admin'>admin</Link>
                   </li>

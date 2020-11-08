@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 
 // Google auth
@@ -12,6 +12,18 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const [userData, setUserData] = useState({});
+
+  const authCookie = (e) => {
+    const authToken = Cookies.get('auth-token');
+    if (authToken) {
+      setIsAuthenticated(true);
+    }
+  };
+
+  useEffect(() => {
+    authCookie();
+    // eslint-disable-next-line
+  }, []);
 
   // Login
   const login = async (email, password) => {
@@ -27,12 +39,13 @@ export const AuthProvider = ({ children }) => {
   };
 
   // Logout
-  const logout = async () => {
+  const logout = (cb) => {
     auth.signOut();
     Cookies.remove('auth-token');
     setIsAuthenticated(false);
     setLoading(false);
     setToken(null);
+    setTimeout(cb, 100)
   };
   // Clear Errors
   const clearErrors = () => setIsError(null);

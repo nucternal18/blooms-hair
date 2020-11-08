@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 const frameOne = {
   fontSize: '23px',
   color: '#333',
+  width: '100%',
   fontFamily: 'Arial Helvetica sans-serif',
   lineHeight: '24px',
   padding: '18px 10px 8px',
@@ -14,7 +15,10 @@ const frameOne = {
 };
 
 const vagaroOne = {
-  width: '550px',
+  width: '100%',
+  height: '100%',
+  backgroundColor: 'white',
+  textAlign: 'center',
   padding: '0',
   border: '0',
   margin: '0 auto',
@@ -31,7 +35,7 @@ const BookOnline = () => {
         const script = document.createElement('script');
         script.type = 'text/javascript';
         script.src =
-            'https://www.vagaro.com/resources/WidgetEmbeddedLoader/OZqnC3SqD3OcT3qmV35y6RuSdBuOc1WJD1wOc1WO61CxdfcJE1wgEJgoapOUcO?v=yi584aLayi52goDIOuLLIjDCTSo0aHa2iozlQ84g67v0#';
+          'https://www.vagaro.com//resources/WidgetEmbeddedLoader/OZqnC3SqD3OcT3qmV35y6RuSdBuOc1WJD1wOc1WO61CxdfcJE1wgEJgoapOUc8?v=qh0eNMTIPX8ySyDJjIpBpjlTyOUXZYCZK8zFuePxy3re#';
         script.async = true;
         scriptEl.current.appendChild(script);
         setLoaded(true);
@@ -45,10 +49,10 @@ const BookOnline = () => {
     }, [loaded]);
 
     return (
-      <div className="BackDrop flex-grow">
+      <div className="BackDrop flex-grow w-full ">
         <div id="frameTitle" className="embedded-widget-title" style={frameOne}>
         </div>
-        <div ref={scriptEl} className="vagaro text-white" style={vagaroOne}>
+        <div ref={scriptEl} className="vagaro" style={vagaroOne}>
           <a href='https://sales.vagaro.com/'>Powered by Vagaro</a>&nbsp;
           <a href='https://sales.vagaro.com/salon-software'>Salon Software</a>
           ,&nbsp;
