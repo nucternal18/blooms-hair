@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem('token'));
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [isError, setIsError] = useState(null);
+  const [isError, setIsError] = useState(false);
   const [userData, setUserData] = useState({});
 
   // Login
@@ -29,7 +29,6 @@ export const AuthProvider = ({ children }) => {
   // Logout
   const logout = async () => {
     auth.signOut();
-    localStorage.removeItem('auth-token');
     Cookies.remove('auth-token');
     setIsAuthenticated(false);
     setLoading(false);

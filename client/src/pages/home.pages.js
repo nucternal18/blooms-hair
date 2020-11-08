@@ -2,9 +2,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
 
-// Images
-import Lauren from '../Assets/images/lauren-fleischmann-akfxOADwNhk-unsplash.jpg';
-// import homeImage from '../Assets/images/AdobeStock_53052353.jpeg';
 
 // Containers
 import HomepageContainer from '../Container/HomeCard.container';

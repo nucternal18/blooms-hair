@@ -1,25 +1,38 @@
 import { useState, useEffect } from 'react';
-import { projectFirestore } from '../firebase/config';
+import {
+  projectStorage,
+  projectFirestore,
+  timestamp,
+} from '../firebase/config';
 
-const useFirestore = (collection) => {
-  const [docs, setDocs] = useState([]);
+const useStorage = (file) => {
+  const [progress, setProgress] = useState(0);
+  const [error, setError] = useState(null);
+  const [url, setUrl] = useState(null);
 
   useEffect(() => {
-    const unsub = projectFirestore
-      .collection(collection)
-      .orderBy('createdAt', 'desc')
-      .onSnapshot((snap) => {
-        const documents = [];
-        snap.forEach((doc) => {
-          documents.push({ ...doc.data(), id: doc.id });
-        });
-        setDocs(documents);
-      });
+    // references
+    const storageRef = projectStorage.ref(file.name);
+    const collectionRef = projectFirestore.collection('images');
 
-    return () => unsub();
-  }, [collection]);
-
-  return { docs };
+    storageRef.put(file).on(
+      'state_changed',
+      (snap) => {
+        let percentage = (snap.bytesTransferred / snap.totalBytes) * 100;
+        setProgress(percentage);
+      },
+      (err) => {
+        setError(err);
+      },
+      async () => {
+        const url = await storageRef.getDownloadURL();
+        const createdAt = timestamp();
+        collectionRef.add({ url, createdAt });
+        setUrl(url);
+      }
+    );
+  }, [file]);
+  return { progress, url, error };
 };
 
-export default useFirestore;
+export default useStorage;

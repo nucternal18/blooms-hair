@@ -10,7 +10,7 @@ const RightNav = ({ open, setOpen }) => {
   const [ selectedHome, setSelectedHome ] = useState(false);
   const [ selectedAbout, setSelectedAbout ] = useState(false);
   const [ selectedMenu, setSelectedMenu ] = useState(false);
-  const [ selectedOffers, setSelectedOffers ] = useState(false);
+  const [ selectedGallery, setSelectedGallery ] = useState(false);
   const [ selectedContact, setSelectedContact ] = useState(false);
   const [ selectedBook, setSelectedBook ] = useState(false);
 
@@ -19,7 +19,7 @@ const RightNav = ({ open, setOpen }) => {
     setSelectedHome(true);
     setSelectedAbout(false);
     setSelectedMenu(false);
-    setSelectedOffers(false);
+    setSelectedGallery(false);
     setSelectedContact(false);
     setSelectedBook(false);
   }
@@ -28,7 +28,7 @@ const RightNav = ({ open, setOpen }) => {
     setSelectedHome(false);
     setSelectedAbout(true);
     setSelectedMenu(false);
-    setSelectedOffers(false);
+    setSelectedGallery(false);
     setSelectedContact(false);
     setSelectedBook(false);
   }
@@ -37,16 +37,16 @@ const RightNav = ({ open, setOpen }) => {
     setSelectedHome(false);
     setSelectedAbout(false);
     setSelectedMenu(true);
-    setSelectedOffers(false);
+    setSelectedGallery(false);
     setSelectedContact(false);
     setSelectedBook(false);
   }
-  const handleSlectedOffers = (e) => {
+  const handleGallery = (e) => {
     e.preventDefault();
     setSelectedHome(false);
     setSelectedAbout(false);
     setSelectedMenu(false);
-    setSelectedOffers(true);
+    setSelectedGallery(true);
     setSelectedContact(false);
     setSelectedBook(false);
   }
@@ -55,7 +55,7 @@ const RightNav = ({ open, setOpen }) => {
     setSelectedHome(false);
     setSelectedAbout(false);
     setSelectedMenu(false);
-    setSelectedOffers(false);
+    setSelectedGallery(false);
     setSelectedContact(true);
     setSelectedBook(false);
   }
@@ -64,7 +64,7 @@ const RightNav = ({ open, setOpen }) => {
     setSelectedHome(false);
     setSelectedAbout(false);
     setSelectedMenu(false);
-    setSelectedOffers(false);
+    setSelectedGallery(false);
     setSelectedContact(false);
     setSelectedBook(true);
   }
@@ -106,14 +106,14 @@ const RightNav = ({ open, setOpen }) => {
         <Link to='/service-menu'>SERVICE MENU</Link>
       </li>
       <li
-        onClick={handleSlectedOffers}
+        onClick={handleGallery}
         className={
-          selectedOffers
+          selectedGallery
             ? "text-blue-700 font-bold"
             : "text-white sm:text-black hover:text-blue-300 font-bold"
         }
       >
-        <Link to='/special-offers'>SPECIAL OFFERS</Link>
+        <Link to='/gallery'>GALLERY</Link>
       </li>
       <li
         onClick={handleSlectedContact}

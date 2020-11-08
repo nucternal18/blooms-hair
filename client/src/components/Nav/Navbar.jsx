@@ -10,7 +10,7 @@ const Navbar = () => {
       <nav className="container mx-auto py-2 px-2 flex justify-center items-center">
         <div className="w-full flex flex-row justify-between ">
           <div className="w-48 sm:w-56 p-0 m-0 z-50">
-            <img src={logo} alt="via roma non solo pizza logo"  />
+            <img src={logo} alt="blooms hair logo"  />
           </div>
           <Burger />
         </div>

@@ -1,4 +1,4 @@
-import * as firebase from 'firebase/app';
+import firebase from 'firebase/app';
 import 'firebase/storage';
 import 'firebase/firestore';
 import 'firebase/auth';
@@ -30,7 +30,7 @@ const createUserProfileDocument = async (userAuth, additionalData) => {
 
   if (!snapshot.exists) {
     const { displayName, email } = userAuth;
-    const createdAt = new Date();
+    const createdAt = timestamp();
 
     try {
       await userRef.set({
@@ -40,7 +40,7 @@ const createUserProfileDocument = async (userAuth, additionalData) => {
         ...additionalData,
       });
     } catch (error) {
-      console.log("error creating user ", error.message);
+      console.log('error creating user ', error.message);
     }
   }
   return userRef;

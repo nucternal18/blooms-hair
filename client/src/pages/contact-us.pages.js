@@ -30,8 +30,10 @@ const ContactUs = () => {
             <div className='col-span-1 px-4 py-2 font-bold'>PHONE</div>
             <div className='col-span-1 px-4 py-2'>07838849597</div>
             <div className='col-span-1 px-4 py-2 font-bold'>EMAIL</div>
-            <div className='col-span-1 px-4 py-2'>
-              appointments@bloomshair.co.uk
+            <div className='col-span-1 px-4 py-2 break-words'>
+              <a href='mailto:appointments@bloomshair.co.uk'>
+                appointments@bloomshair.co.uk
+              </a>
             </div>
             <div className='col-span-1 px-4 py-2 font-bold'>ADDRESS</div>
             <div className='col-span-1 px-4 py-2'>

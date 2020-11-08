@@ -13,7 +13,9 @@ const HomepageContainer = () => {
     <>
       <div className='grid grid-cols-1 sm:grid-cols-2 '>
         <div className='py-4 px-8 bg-gray-700 flex flex-col justify-center'>
-          <h1 className='text-white text-4xl mb-2 font-bold'>About Blooms Hair, London</h1>
+          <h1 className='text-white text-4xl mb-2 font-bold'>
+            About Blooms Hair, London
+          </h1>
           <p className='font-thin mb-4 text-white'>
             At Blooms Hair, we are passionate about making you feel special,
             every day. That’s why we offer a wide selection of quality services
@@ -31,13 +33,12 @@ const HomepageContainer = () => {
         <div
           className='w-full justify-center flex flex-col items-center '
           style={{
-            backgroundImage: `url(${AdobeStock_123825321})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            height: "450px",
-          }}
-        >
+            backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/george-bohunicky-qJKT2rMU0VU-unsplash.jpg?alt=media&token=3ceb1c1f-3f91-434e-9cb8-b666310506d9)`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            height: '450px',
+          }}>
           <p className='text-center text-white text-4xl font-bold'>
             New Offers Coming Soon
           </p>
@@ -52,13 +53,12 @@ const HomepageContainer = () => {
         <div
           className='w-full justify-center flex flex-col items-center h-48'
           style={{
-            backgroundImage: `url(${AdobeStock_123825321})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            height: "400px",
-          }}
-        >
+            backgroundImage: `url(https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/AdobeStock_278832769.jpeg?alt=media&token=44cc3645-356b-49bd-b6a0-c10946d158e0)`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            height: '400px',
+          }}>
           <p className='text-center text-white text-4xl font-bold'>
             Book Online
           </p>
@@ -71,13 +71,12 @@ const HomepageContainer = () => {
         <div
           className='w-full justify-center flex flex-col items-center h-48 '
           style={{
-            backgroundImage: `url(${AdobeStock_123825321})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            height: "400px",
-          }}
-        >
+            backgroundImage: `url(https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/AdobeStock_192477796.jpeg?alt=media&token=ebd28a93-5fb5-4feb-8244-b51c9617ce5d)`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            height: '400px',
+          }}>
           <p className='text-center text-white text-4xl font-bold'>
             Service Menu
           </p>
@@ -90,13 +89,12 @@ const HomepageContainer = () => {
         <div
           className='w-full justify-center flex flex-col items-center h-48 '
           style={{
-            backgroundImage: `url(${AdobeStock_123825321})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            height: "400px",
-          }}
-        >
+            backgroundImage: `url(https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/AdobeStock_208497707.jpeg?alt=media&token=cefd00a3-3c68-4e78-b8a2-ce76be627a8c)`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            height: '400px',
+          }}>
           <p className='text-center text-white text-4xl font-bold'>
             About Blooms
           </p>
@@ -110,12 +108,11 @@ const HomepageContainer = () => {
           className='w-full justify-center flex flex-col items-center h-48'
           style={{
             backgroundImage: `url(${AdobeStock_123825321})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            height: "400px",
-          }}
-        >
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            height: '400px',
+          }}>
           <p className='text-center text-white text-4xl font-bold'>
             Meet The Team
           </p>
@@ -129,12 +126,11 @@ const HomepageContainer = () => {
           className='w-full justify-center flex flex-col items-center h-48'
           style={{
             backgroundImage: `url(${AdobeStock_123825321})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            height: "400px",
-          }}
-        >
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            height: '400px',
+          }}>
           <p className='text-center text-white text-4xl font-bold'>
             Visit Our Instagram
           </p>
@@ -148,12 +144,11 @@ const HomepageContainer = () => {
           className='w-full justify-center flex flex-col items-center h-48'
           style={{
             backgroundImage: `url(${AdobeStock_123825321})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            height: "400px",
-          }}
-        >
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            height: '400px',
+          }}>
           <p className='text-center text-white text-4xl font-bold'>
             Contact Blooms
           </p>
@@ -166,32 +161,31 @@ const HomepageContainer = () => {
       </div>
       <div className='homecard-sm bg-transparent text-white justify-center flex items-center text-white font-bold text-center'>
         <motion.div
-            className='opacity-75 z-50'
-            initial='hidden'
-            animate='visible'
-            variants={variants}
-            transition={{ duration: 2.0 }}
-          >
-          <h2 className="text-4xl">Let's Get Social</h2>
+          className='opacity-75 z-50'
+          initial='hidden'
+          animate='visible'
+          variants={variants}
+          transition={{ duration: 2.0 }}>
+          <h2 className='text-4xl'>Let's Get Social</h2>
           <p>Keep up to date with Blooms Hair on our social media channels</p>
-            <ul className='flex justify-center '>
-              <li className='px-1 py-2 m-1 hover:text-blue-500'>
-                <a href='https://www.facebook.com/pages/category/Pizza-Place/Viaromanonsolopizza-108686514250214/'>
-                  <i className='fab fa-facebook text-4xl' />
-                </a>
-              </li>
-              <li className='px-1 py-2 m-1 hover:text-blue-500'>
-                <a href='https://www.instagram.com/viaromanonsolopizza/'>
-                  <i className='fab fa-instagram text-4xl' />
-                </a>
-              </li>
-              <li className='px-1 py-2 m-1 hover:text-blue-500'>
-                <a href='https://www.google.com/maps/place/viaROMAnonsolopizza/@45.7240617,8.6311318,15z/data=!4m5!3m4!1s0x0:0x6dc73345553ebfda!8m2!3d45.7240617!4d8.6311318'>
-                  <i className='fab fa-google text-4xl' />
-                </a>
-              </li>
-            </ul>
-          </motion.div>
+          <ul className='flex justify-center '>
+            <li className='px-1 py-2 m-1 hover:text-blue-500'>
+              <a href='https://www.facebook.com/pages/category/Pizza-Place/Viaromanonsolopizza-108686514250214/'>
+                <i className='fab fa-facebook text-4xl' />
+              </a>
+            </li>
+            <li className='px-1 py-2 m-1 hover:text-blue-500'>
+              <a href='https://www.instagram.com/viaromanonsolopizza/'>
+                <i className='fab fa-instagram text-4xl' />
+              </a>
+            </li>
+            <li className='px-1 py-2 m-1 hover:text-blue-500'>
+              <a href='https://www.google.com/maps/place/viaROMAnonsolopizza/@45.7240617,8.6311318,15z/data=!4m5!3m4!1s0x0:0x6dc73345553ebfda!8m2!3d45.7240617!4d8.6311318'>
+                <i className='fab fa-google text-4xl' />
+              </a>
+            </li>
+          </ul>
+        </motion.div>
       </div>
     </>
   );

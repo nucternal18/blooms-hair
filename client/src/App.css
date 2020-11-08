@@ -1,11 +1,18 @@
+:root{
+  --primary: #efb6b2;
+  --secondary: #4e4e4e;
+  --error: #ff4a4a;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  background-image: url('./Assets/images/lauren-fleischmann-akfxOADwNhk-unsplash.jpg');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/lauren-fleischmann-akfxOADwNhk-unsplash.jpg?alt=media&token=2bcfcfe6-51ad-4382-992c-9495f89d4a5e');
   background-attachment: fixed;
+  color: var(--secondary);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -13,9 +20,111 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.App{
+  max-width: 960px;
+  margin: 0 auto;
+}
+.title h1{
+  color: var(--primary);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+.title h2, .title p{
+  text-align: center;
+}
+.title h2{
+  margin-top: 60px;
+  font-size: 2.6rem;
+}
+
+/* upload form styles */
+
+
+/* progress bar styles */
+.progress-bar {
+    height: 5px;
+    background: var(--primary);
+    margin-top: 20px;
+}
+
+/* image grid styles */
+.img-grid {
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+}
+
+.img-wrap {
+    overflow: hidden;
+    height: 0;
+    padding: 50% 0;
+    /* padding controls height, will always be perfectley square regardless of the width */
+    position: relative;
+    opacity: 0.8;
+}
+
+.img-wrap img {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 150%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* modal styles */
+.home {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+/* Slider image */
+#intro {
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Backdrop */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  
+}
+
+.backdrop img {
+   display: block;
+    max-width: 60%;
+    max-height: 70%;
+    margin: 60px auto;
+    box-shadow: 3px 5px 7px #000000;
+    border: 3px solid white;
+}
+
+@media (max-width: 576px) {
+    #intro {
+        height: 400px;
+    }
+
+    .backdrop img {
+      max-width: 90%;
+      height: 60%;
+    }
 }
 
 .homecard-sm {
@@ -32,7 +141,7 @@ code {
   transform: translate(-50%, -56%);
   object-fit: cover;
   width: 100%;
-  background: url(./Assets/images/AdobeStock_53052353.jpeg) no-repeat center
+  background: url('https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/AdobeStock_53052353.jpeg?alt=media&token=15a88f5f-9c23-488d-8246-2196f761e84b') no-repeat center
     center;
   background-size: cover;
   position: absolute;
@@ -42,7 +151,7 @@ code {
 }
 
 .abt-img-card {
-  background-image: url(./Assets/images/AdobeStock_208497707.jpeg);
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/AdobeStock_208497707.jpeg?alt=media&token=cefd00a3-3c68-4e78-b8a2-ce76be627a8c');
   background-size: cover;
   position: relative;
   min-height: 400px;
@@ -51,7 +160,7 @@ code {
   margin: 0;
 }
 .srv-menu-card {
-  background-image: url(./Assets/images/AdobeStock_290145313.jpeg);
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/AdobeStock_290145313.jpeg?alt=media&token=2baf489b-6c36-4767-b495-3b6d024f38b0');
   background-size: cover;
   position: relative;
   min-height: 500px;
@@ -60,7 +169,7 @@ code {
   margin: 0;
 }
 .contact-menu-card {
-  background-image: url(./Assets/images/clark-tibbs-oqStl2L5oxI-unsplash.jpg);
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/clark-tibbs-oqStl2L5oxI-unsplash.jpg?alt=media&token=486ee394-e32e-4565-b4b0-750ab366c95f');
   background-size: cover;
   position: relative;
   min-height: 600px;
