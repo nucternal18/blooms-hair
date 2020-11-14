@@ -21,7 +21,7 @@ const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
   position: relative;
-  top: 15px;
+  top: 20px;
   right: 5px;
   z-index: 50;
   display: none;
@@ -29,6 +29,7 @@ const StyledBurger = styled.div`
   @media (max-width: 1023px) {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-flow: column nowrap;
   }
 

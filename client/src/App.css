@@ -13,11 +13,14 @@
   --clr-primary-8: hsl(21, 80%, 74%);
   --clr-primary-9: hsl(21, 94%, 87%);
   --clr-primary-10: hsl(21, 100%, 94%);
+  --clr-primary-11: #2caeba;
+  --clr-primary-12: hsl(186, 100%, 94%);
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
+  --clr-grey-5: hsl(210, 22%, 49%);
   /* grey used for paragraphs */
   --clr-grey-5: hsl(210, 22%, 49%);
   --clr-grey-6: hsl(209, 23%, 60%);
@@ -121,9 +124,8 @@ p {
 .section {
   position: relative;
   width: 100vw;
-  height: 500px;
+  height: 600px;
   text-align: center;
-  position: relative;
   display: flex;
   overflow: hidden;
 }
@@ -163,8 +165,7 @@ Slider
 }
 .person-img {
   width: 100vw;
-  height: 100%;;
-  
+  height: 100%;
 }
 article h4 {
   text-transform: uppercase;
@@ -192,7 +193,7 @@ article h4 {
 .next {
   position: absolute;
   margin: 0 5px;
-  top: 250px;
+  top: 300px;
   transform: translateY(-50%);
   background: var(--clr-grey-5);
   color: var(--clr-white);
@@ -247,8 +248,12 @@ article.nextSlide {
   transform: translateX(100%);
 }
 
-
 /* upload form styles */
+
+.active-btn {
+  color: var(--clr-primary-5);
+    box-shadow:  0 2px var(--clr-primary-5);
+  }
 
 /* progress bar styles */
 .progress-bar {
@@ -294,19 +299,6 @@ article.nextSlide {
   overflow: hidden;
   background-size: cover;
   scroll-behavior: smooth;
-}
-
-/* Nav link */
-.nav-link {
-  color: #fff;
-}
-
-.nav-link:active {
-  color: #2b6cb0;
-}
-
-.nav-link:hover {
-  color: #2a4365;
 }
 
 /* Slider image */
@@ -369,7 +361,7 @@ article.nextSlide {
 .abt-img-card {
   background-image: url('https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/AdobeStock_208497707.jpeg?alt=media&token=cefd00a3-3c68-4e78-b8a2-ce76be627a8c');
   background-size: cover;
-  position: relative;
+
   min-height: 400px;
   scroll-behavior: smooth;
   overflow: hidden;
@@ -378,7 +370,7 @@ article.nextSlide {
 .srv-menu-card {
   background-image: url('https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/AdobeStock_290145313.jpeg?alt=media&token=2baf489b-6c36-4767-b495-3b6d024f38b0');
   background-size: cover;
-  position: relative;
+
   min-height: 500px;
   scroll-behavior: smooth;
   overflow: hidden;
@@ -387,7 +379,7 @@ article.nextSlide {
 .contact-menu-card {
   background-image: url('https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/clark-tibbs-oqStl2L5oxI-unsplash.jpg?alt=media&token=486ee394-e32e-4565-b4b0-750ab366c95f');
   background-size: cover;
-  position: relative;
+
   min-height: 600px;
   scroll-behavior: smooth;
   overflow: hidden;
@@ -395,6 +387,14 @@ article.nextSlide {
 }
 
 /* book online */
+.vagaro {
+  width: 100%;
+  height: 500px;
+  background-color: white;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+}
 .vagaro a {
   font-size: 14px;
   color: #333;
@@ -411,12 +411,15 @@ article.nextSlide {
   background: rgba(0, 0, 0, 0.5);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .homepage-card {
     height: 550px;
   }
 
   .abt-img-card {
     background-position: center;
+  }
+  .active-btn {
+    box-shadow: -2px 0 var(--clr-primary-5);
   }
 }
