@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import HomepageContainer from '../Container/HomeCard.container';
 
 // Components
-import Slider from '../components/Slider.tsx';
+import Slider from '../components/Slider.js';
 
 const variants = {
   hidden: { opacity: 0 },
