@@ -26,6 +26,7 @@ const Home = () => {
           <p>Welcome to Blooms Hair</p>
         </motion.div>
       </div>
+      <Slider />
       <div className=''>
         <HomepageContainer />
       </div>

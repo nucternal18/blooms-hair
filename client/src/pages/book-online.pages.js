@@ -1,32 +1,31 @@
 // @ts-nocheck
 import React, { useState, useEffect, useRef } from 'react';
-
+import Spinner from '../components/spinner.component';
 
 const BookOnline = () => {
-    const [loaded, setLoaded] = useState(false);
-    const scriptEl = useRef(null);
+  const [loading, setLoading] = useState(false);
+  const scriptEl = useRef(null);
 
-    useEffect(() => {
-        // Append a script tag to the end of the div
-        const script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src =
-          'https://www.vagaro.com//resources/WidgetEmbeddedLoader/OZqnC3SqD3OcT3qmV35y6RuSdBuOc1WJD1wOc1WO61CxdfcJE1wgEJgoapOUc8?v=qh0eNMTIPX8ySyDJjIpBpjlTyOUXZYCZK8zFuePxy3re#';
-        script.async = true;
-        scriptEl.current.appendChild(script);
-        setLoaded(true);
-    }, []);
-    useEffect(() => {
-      if (typeof window !== 'undefined' && loaded) {
-        // Reference the function stored in the window object 
-        let loadWindow = window.loadWindow;
-        window.addEventListener('load', loadWindow, false, { passive: true });
-      }
-    }, [loaded]);
+  useEffect(() => {
+    setLoading(true);
+    // Append a script tag to the end of the div
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.language = 'javascript';
+    script.src =
+      'https://www.vagaro.com//resources/WidgetEmbeddedLoader/OZqnC3SqD3OcT3qmV35y6RuSdBuOc1WJD1wOc1WO61Ctdg4tjxMG9pUxapkUcPCu7gevEhAJDXwPW?v=yLVszzzF4Fyeyx4s0YJfhPLt37IcESD3rlFYhU1o30ci#';
+    script.async = true;
 
-    return (
-      <div className="bg-white flex-grow w-full ">
-        <div ref={scriptEl} className="vagaro" >
+    scriptEl.current.appendChild(script);
+    setLoading(false);
+  }, []);
+
+  return (
+    <div className='bg-white flex-grow w-full h-auto'>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div ref={scriptEl} className='vagaro'>
           <a href='https://sales.vagaro.com/'>Powered by Vagaro</a>&nbsp;
           <a href='https://sales.vagaro.com/salon-software'>Salon Software</a>
           ,&nbsp;
@@ -36,8 +35,9 @@ const BookOnline = () => {
             Fitness Software
           </a>
         </div>
-      </div>
-    );
-}
+      )}
+    </div>
+  );
+};
 
 export default BookOnline;

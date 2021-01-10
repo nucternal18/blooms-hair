@@ -2,9 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-//Images
-import AdobeStock_123825321 from "../Assets/images/AdobeStock_123825321.jpeg";
-
 const variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },

@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 
 const images = [
-  'https://d33wubrfki0l68.cloudfront.net/dd23708ebc4053551bb33e18b7174e73b6e1710b/dea24/static/images/wallpapers/shared-colors@2x.png',
-  'https://d33wubrfki0l68.cloudfront.net/49de349d12db851952c5556f3c637ca772745316/cfc56/static/images/wallpapers/bridge-02@2x.png',
-  'https://d33wubrfki0l68.cloudfront.net/594de66469079c21fc54c14db0591305a1198dd6/3f4b1/static/images/wallpapers/bridge-01@2x.png',
+  'https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/lauren-fleischmann-akfxOADwNhk-unsplash.jpg?alt=media&token=2bcfcfe6-51ad-4382-992c-9495f89d4a5e',
+  'https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/AdobeStock_53052353.jpeg?alt=media&token=15a88f5f-9c23-488d-8246-2196f761e84b',
+  'https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/AdobeStock_208497707.jpeg?alt=media&token=cefd00a3-3c68-4e78-b8a2-ce76be627a8c',
+  'https://firebasestorage.googleapis.com/v0/b/bloomshair-e4d4d.appspot.com/o/AdobeStock_290145313.jpeg?alt=media&token=2baf489b-6c36-4767-b495-3b6d024f38b0',
 ];
 
-const variants = {};
+
 
 const Slider = () => {
   const [image, setImage] = useState(images);

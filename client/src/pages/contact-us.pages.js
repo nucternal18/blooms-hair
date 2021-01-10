@@ -1,7 +1,6 @@
 import React from 'react';
 import Maps from '../components/GoogleMaps';
 
-
 const containerStyle = {
   height: '400px',
 };
@@ -9,7 +8,7 @@ const containerStyle = {
 const ContactUs = () => {
   return (
     <div className='w-full bg-white flex-grow'>
-      <div className='contact-menu-card flex justify-center items-center font-bold text-white text-4xl sm:text-6xl'>
+      <div className='contact-menu-card flex justify-center items-center text-center px-2 font-bold text-white text-2xl md:text-6xl'>
         <h1>Contact Blooms Hair</h1>
       </div>
       <div className='container my-8 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2'>
@@ -63,7 +62,7 @@ const ContactUs = () => {
         </div>
       </div>
       <div className='w-full'>
-        <Maps containerStyle={containerStyle} />
+        <Maps containerStyle={containerStyle} zoom={18} />
       </div>
     </div>
   );

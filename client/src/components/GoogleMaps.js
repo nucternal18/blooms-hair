@@ -12,7 +12,7 @@ const center = {
   lng: -0.099461,
 };
 
-const Maps = ({ containerStyle }) => {
+const Maps = ({ containerStyle, zoom }) => {
   const [selected, setSelected] = useState(false);
 
   // const onLoad = useCallback(function callback(map) {
@@ -26,7 +26,7 @@ const Maps = ({ containerStyle }) => {
 
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={17}>
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={zoom}>
         <Marker
           position={{ lat: 51.526528, lng: -0.099461 }}
           onClick={() => {

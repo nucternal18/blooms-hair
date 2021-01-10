@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "server": "npm start ==prefix backend",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client \""
+  },
+  "devDependencies": {
+    "ts-node": "^9.1.1"
+  },
+  "dependencies": {
+    "firebase-tools": "^9.1.2",
+    "global": "^4.4.0"
+  }
+}

@@ -5,7 +5,11 @@ module.exports = {
   },
   purge: {
     layers: ['utilities'],
-    content: ['./pages/**/*.js', './components/**/*.js'],
+    content: [
+      './pages/**/*.js',
+      './components/**/*.js',
+      './Container/**/*.js',
+    ],
   },
   target: 'relaxed',
   prefix: '',

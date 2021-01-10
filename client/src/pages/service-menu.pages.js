@@ -5,7 +5,7 @@ const ServiceMenu = () => {
   return (
     <div className='flex-grow'>
       <div className='w-full bg-white'>
-        <div className='srv-menu-card flex justify-center items-center font-bold text-white text-4xl sm:text-6xl'>
+        <div className='srv-menu-card flex justify-center items-center font-bold text-white text-center text-2xl md:text-6xl'>
           <h1>Service & Price Menu</h1>
         </div>
         <div className='container mx-auto py-6 px-4'>

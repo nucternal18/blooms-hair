@@ -85,6 +85,12 @@ const Ul = styled.ul`
     margin-bottom: 0.1rem;
     transition: transform 0.3s ease-in-out;
     opacity: 0.9;
+
+    li {
+      border-bottom: 1px solid;
+      width: 50%;
+      text-align: center;
+    }
   }
 `;
 
